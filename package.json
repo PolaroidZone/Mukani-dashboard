@@ -1,0 +1,19 @@
+{
+  "name": "mukani-dashboard",
+  "version": "1.0.0",
+  "description": "Mukani desboard app for website Mukani",
+  "main": "server.js",
+  "scripts": {
+    "tester": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

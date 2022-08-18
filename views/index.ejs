@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <script src="https://kit.fontawesome.com/15ae8a5246.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <%- include('layouts/_header.ejs') %> 
+    </section> 
+    
+    <section class="container">
+        <div class="dash-main">
+            <%- include('layouts/_side_nav.ejs') %> 
+            <div class="main-container">
+                <div class="main-elements">
+                    <div class="element-box-big">
+                        <div class="image-box">
+                            <img src="/img/colorful-blobs.jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <div class="content-title">
+                                <h1>MUKANI</h1>
+                            </div>
+                            <div class="content-actions">
+                                <div class="action-link">
+                                    <h1>Domain :</h1>
+                                    <a href="">Http://mysite.com</a>
+                                </div>
+                                <div class="action-link">
+                                    <h1>Email :</h1>
+                                    <a href="">tsogangamosweswe@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element-box-small">
+                        <h3>Create a new blog article</h3>
+                        <a href=""><div class="button-blue"><h1>Create Blog Post</h1></div></a>
+                    </div>
+                    <div class="element-box-small">
+                        <h3>Add a new project</h3>
+                        <a href=""><div class="button-blue"><h1>Add New Project</h1></div></a>
+                    </div>
+                </div>
+
+                <div class="sub-elements">
+                    <div class="sub-element-heading">
+                        <h1>Latest blog post</h1>
+                    </div>
+                    <div class="element-box-big">
+                        <div class="image-box">
+                            <img src="/img/colorful-blobs.jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <div class="content-title">
+                                <h1>Creating the best looking site</h1>
+                            </div>
+                            <div class="content-description">
+                                <p>Created: </p><p>02/12/22</p>
+                            </div>
+                            <div class="content-actions">
+                                <div class="action-update">
+                                    <a href=""><div class="update-button"><p>Update article</p></div></a>
+                                </div>
+                                <div class="action-delete">
+                                    <form action="">
+                                        <button>Delete post</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-element-heading">
+                        <h1>Latest Project</h1>
+                    </div>
+                    <div class="element-box-big">
+                        <div class="image-box">
+                            <img src="/img/colorful-blobs.jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <div class="content-title">
+                                <h1>YTFam Youtube clone</h1>
+                            </div>
+                            <div class="content-description">
+                                <p>Status: </p><p>Complete</p>
+                            </div>
+                            <div class="content-actions">
+                                <div class="action-update">
+                                    <a href=""><div class="update-button"><p>Update Project</p></div></a>
+                                </div>
+                                <div class="action-delete">
+                                    <form action="">
+                                        <button>Delete project</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

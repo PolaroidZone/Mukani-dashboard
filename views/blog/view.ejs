@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="/styles/new.css">
+    <script src="https://kit.fontawesome.com/15ae8a5246.js" crossorigin="anonymous"></script>
+    <style>
+        .show {
+            width: 70%;
+        }
+
+        .show-details {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #6b6b6b;
+            border-radius: 20px;
+            min-height: 600px;
+            padding: 20px;
+            color: white;
+        }
+
+        .title-show {
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+
+        .title-show h1 {
+            font-size: 46px;
+        }
+
+        .description-show {
+            padding-bottom: 20px;
+        }
+        
+        .description-show h2 {
+            font-weight: 400;
+            font-size: 26px;
+        }
+        
+        .markdown-show {
+            padding-bottom: 30px;
+        }
+
+        .markdown-show p {
+            font-size: 20px;
+        }
+
+        .markdown-show h1 {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <%- include('../layouts/_header.ejs') %> 
+    </section> 
+    <section class="container">
+        <div class="dash-main">
+            <div class="main-container" style=" width: 100%;">
+                <div class="main-elements">
+                    <div class="show">
+                        <div class="edit-tools">
+                            <div class="edit-box">
+                                <div class="btn-con">
+                                    <a href="" class="btn-round"><div class="btn-button-r"><i class="fas fa-arrow-left"></i></div></a>
+                                    <h1 class="tools-heading">Blog Article</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-details">
+                            <div class="title-show">
+                                <h1>Title</h1>
+                            </div>
+                            <div class="description-show">
+                                <h2>Description</h2>
+                            </div>
+                            <div class="markdown-show">
+                                <p>This is the markdown</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

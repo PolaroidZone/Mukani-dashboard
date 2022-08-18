@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <script src="https://kit.fontawesome.com/15ae8a5246.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <%- include('../layouts/_header.ejs') %> 
+    </section> 
+    <section class="container">
+        <div class="dash-main">
+            <%- include('../layouts/_side_nav.ejs') %> 
+            <div class="main-container">
+                <div class="main-elements">
+                    <div class="sub-element-heading">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="element-box-small">
+                        <h3>Add a new project to the list</h3>
+                        <a href=""><div class="button-blue"><h1>Add Project</h1></div></a>
+                    </div>
+                </div>
+                <div class="sub-elements">
+                    <div class="sub-element-heading">
+                        <h1>My Projects</h1>
+                    </div>
+                    <div class="element-box-big">
+                        <div class="image-box">
+                            <img src="/img/colorful-blobs.jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <div class="content-title">
+                                <h1>Android development java calculator</h1>
+                            </div>
+                            <div class="content-description">
+                                <p>Created: </p><p>02/12/22</p>
+                            </div>
+                            <div class="content-actions">
+                                <div class="action-update">
+                                    <a href=""><div class="update-button"><p>Update project</p></div></a>
+                                </div>
+                                <div class="action-update" >
+                                    <a href=""><div class="update-button" style="background-color: #515151;"><p>Open project</p></div></a>
+                                </div>
+                                <div class="action-delete">
+                                    <form action="">
+                                        <button>Delete project</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
