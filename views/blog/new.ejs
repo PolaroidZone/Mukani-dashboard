@@ -11,45 +11,15 @@
 </head>
 <body>
     <section class="container">
-        <%- include('../layouts_header.ejs') %> 
+        <%- include('../layouts/_header.ejs') %> 
     </section> 
     <section class="container">
         <div class="dash-main">
             <div class="main-container" style=" width: 100%;">
                 <div class="main-elements">
-                    <form action="">
-                    <div class="edit-tools">
-                        <div class="edit-box">
-                            <div class="btn-con">
-                                <a href="" class="btn-round"><div class="btn-button-r"><i class="fas fa-arrow-left"></i></div></a>
-                                <h1 class="tools-heading">Compose Article</h1>
-                            </div>
-                        </div>
-                        <div class="edit-box">
-                            <div class="btn-con">
-                                <span id="nameholder">Add image</span>
-                                <input type="file" accept="image/*" class="btn-upload"  hidden="hidden" id="realfile" required>
-                                <label for="file" id="newButton"><i class="fas fa-file-image"></i></label>
-                                <button type="submit" class="btn-round" style="margin-left: 20px;"><div class="btn-button-r"><i class="fas fa-paper-plane"></i></div></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-editor">
-                        
-                            <div class="blog-title">
-                                <input type="text" name="title" id="" required placeholder="Title">
-                            </div>
-                            <div class="blog-description">
-                                <input type="text" name="description" id="" required placeholder="Description">
-                            </div>
-                            <div class="blog-tags">
-                            </div>
-                            <div class="blog-markdown">
-                                <textarea name="markdown" id="markdown" cols="30" rows="10" placeholder="Start writing" required></textarea>
-                            </div>
-                       
-                    </div> 
-                </form>
+                    <form action="/blog" method="post">
+                        <%- include('_form_fields.ejs')%>
+                    </form>
                 </div>
             </div>
         </div>
@@ -57,7 +27,7 @@
     <script type="text/javascript">
         const realbutton = document.getElementById("realfile")
         const newButton = document.getElementById("newButton")
-        const nameholder = document.getElementById("nameholder")
+        const imageString = document.getElementById("imageString")
 
         newButton.addEventListener("click", function() {
             realbutton.click();
@@ -66,7 +36,7 @@
         realbutton.addEventListener("change", function() {
             if (realbutton.value) {
                 newButton.style.backgroundColor = "#28ca43"
-                nameholder.innerHTML = realbutton.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]
+                imageString.value = realbutton.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]
              } else {
                 nameholder.innerHTML = "Add image"
             }

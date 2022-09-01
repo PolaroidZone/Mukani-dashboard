@@ -1,6 +1,11 @@
 const express = require('express')
+const mongoose = require('mongoose')
+const Article = require('./models/article')
+const methodOverride = require('method-override')
 const app = express()
 const port = '3080'
+
+mongoose.connect('mongodb://localhost/mukani')
 
 //set view engine
 app.set('view engine', 'ejs')
@@ -8,12 +13,17 @@ app.set('view engine', 'ejs')
 //set static files
 app.use(express.static('public'))
 
-//set routes
-const postsRouter = require('./routes/blog.js')
-const projectsRouter = require('./routes/projects.js')
+app.use(express.urlencoded({ extended: true}))
+//methodOverride
+app.use(methodOverride('_method'))
 
-app.get('/',  (req, res) => {
-    res.render('index.ejs')
+//set routes
+const postsRouter = require('./routes/blog')
+const projectsRouter = require('./routes/projects')
+
+app.get('/', async (req, res) => {
+    const articles = await Article.find().sort({createdAt: 'desc'})
+    res.render('index.ejs', { articles: articles})
 })
 
 //routes

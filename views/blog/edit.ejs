@@ -17,7 +17,7 @@
         <div class="dash-main">
             <div class="main-container" style=" width: 100%;">
                 <div class="main-elements">
-                    <form action="/projects" method="post">
+                    <form action="/blog/<%= article.id %>?_method=put " method="post">
                         <%- include('_form_fields.ejs')%>
                     </form>
                 </div>

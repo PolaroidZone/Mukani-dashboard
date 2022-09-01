@@ -22,39 +22,42 @@
                     </div>
                     <div class="element-box-small">
                         <h3>Create a new blog article</h3>
-                        <a href=""><div class="button-blue"><h1>Create Blog Post</h1></div></a>
+                        <a href="blog/new"><div class="button-blue"><h1>Create Blog Post</h1></div></a>
                     </div>
                 </div>
                 <div class="sub-elements">
                     <div class="sub-element-heading">
                         <h1>My articles</h1>
                     </div>
+                    <% articles.forEach(Article => { %>
+                     
                     <div class="element-box-big">
                         <div class="image-box">
                             <img src="/img/colorful-blobs.jpg" alt="">
                         </div>
                         <div class="content-box">
                             <div class="content-title">
-                                <h1>Creating the best looking site</h1>
+                                <h1><%= Article.title %></h1>
                             </div>
                             <div class="content-description">
-                                <p>Created: </p><p>02/12/22</p>
+                                <p>Created: </p><p><%= Article.createdAt.toLocaleString() %> </p>
                             </div>
                             <div class="content-actions">
                                 <div class="action-update">
-                                    <a href=""><div class="update-button"><p>Update article</p></div></a>
+                                    <a href="blog/edit/<%= Article.id %> "><div class="update-button"><p>Update article</p></div></a>
                                 </div>
                                 <div class="action-update" >
-                                    <a href=""><div class="update-button" style="background-color: #515151;"><p>Open article</p></div></a>
+                                    <a href="blog/<%= Article.slug %> "><div class="update-button" style="background-color: #515151;"><p>Open article</p></div></a>
                                 </div>
                                 <div class="action-delete">
-                                    <form action="">
-                                        <button>Delete post</button>
+                                    <form action="/blog/<%= Article.id %>?_method=DELETE" method="post">
+                                        <button type="submit">Delete post</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <% }) %>
                 </div>
             </div>
         </div>

@@ -51,6 +51,13 @@
         .markdown-show h1 {
             font-size: 36px;
         }
+        #newButton {
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50px;
+        }
     </style>
 </head>
 <body>
@@ -65,20 +72,25 @@
                         <div class="edit-tools">
                             <div class="edit-box">
                                 <div class="btn-con">
-                                    <a href="" class="btn-round"><div class="btn-button-r"><i class="fas fa-arrow-left"></i></div></a>
+                                    <a href="/blog" class="btn-round"><div class="btn-button-r"><i class="fas fa-arrow-left"></i></div></a>
                                     <h1 class="tools-heading">Blog Article</h1>
+                                </div>
+                            </div>
+                            <div class="edit-box">
+                                <div class="btn-con">
+                                    <a href="/blog/edit/<%= article.id %> " id="newButton"><i class="fas fa-edit"></i>-Edit</a>
                                 </div>
                             </div>
                         </div>
                         <div class="show-details">
                             <div class="title-show">
-                                <h1>Title</h1>
+                                <h1><%= article.title %></h1>
                             </div>
                             <div class="description-show">
-                                <h2>Description</h2>
+                                <h2><%= article.description %></h2>
                             </div>
                             <div class="markdown-show">
-                                <p>This is the markdown</p>
+                                <%- article.sanitizedHtml %> 
                             </div>
                         </div>
                     </div>

@@ -51,6 +51,13 @@
         .markdown-show h1 {
             font-size: 36px;
         }
+        #newButton {
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50px;
+        }
     </style>
 </head>
 <body>
@@ -69,17 +76,22 @@
                                     <h1 class="tools-heading">Project Details</h1>
                                 </div>
                             </div>
+                            <div class="edit-box">
+                                <div class="btn-con">
+                                    <a href="/projects/edit/<%= project.id %> " id="newButton"><i class="fas fa-edit"></i>-Edit</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="show-details">
                             <div class="title-show">
-                                <h1>Title</h1>
+                                <h1><%= project.name %> </h1>
                             </div>
                             <div class="description-show">
-                                <h2>Description</h2>
+                                <h2><%= project.description%></h2>
                             </div>
                             <div class="markdown-show">
-                                <p>This is the markdown</p>
-                            </div>
+                                <p><%= project.markdown %> </p>
+                            </div> 
                         </div>
                     </div>
                 </div>
